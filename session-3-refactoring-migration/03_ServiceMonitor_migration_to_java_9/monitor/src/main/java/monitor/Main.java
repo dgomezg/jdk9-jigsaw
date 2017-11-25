@@ -25,7 +25,7 @@ import static java.util.stream.Collectors.toList;
 public class Main {
 
 	public static void main(String[] args) {
-		logClassPathContent(); // We might not have a solution for this method when migrating to Java 9 - whats the best call?
+		//logClassPathContent(); // We might not have a solution for this method when migrating to Java 9 - whats the best call?
 
 		Monitor monitor = createMonitor();
 		MonitorServer server = MonitorServer

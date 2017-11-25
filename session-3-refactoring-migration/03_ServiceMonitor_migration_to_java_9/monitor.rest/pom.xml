@@ -38,8 +38,28 @@
 			<groupId>com.google.code.findbugs</groupId>
 			<artifactId>jsr305</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.2.7</version>
+        </dependency>
 	</dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <compilerArgs>
+                        <arg>--add-modules</arg>
+                        <arg>java.xml.ws.annotation</arg>
+                        <arg>--patch-module=java.xml.ws.annotation=${settings.localRepository}/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 	<!--
 		create a build profile that tells maven to add and patch the respective modules.
 		The module and package names are visible in the error messages.

@@ -76,9 +76,11 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.6.1</version>
+				<version>3.7.0</version>
 				<configuration>
 					<fork>true</fork>
+					<source>9</source>
+					<target>9</target>
 				</configuration>
 			</plugin>
 			<plugin>
